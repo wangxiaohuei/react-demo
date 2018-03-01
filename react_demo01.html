@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>react demo01</title>
+</head>
+
+<body>
+    <div id="reactContainer"></div>
+    <script src="./common/react.js"></script>
+    <script src="./common/react-dom.js"></script>
+    <script>
+        // 注册一个组件类 HelloComponent
+        var HelloComponent = React.createClass({
+            render: function () {
+                return React.createElement('h1', null, 'Hello world');
+            }
+        });
+        // 用于将模版转为 HTML 语言，并插入指定的 DOM 节点
+        ReactDOM.render(React.createElement(
+            HelloComponent, null),
+            document.getElementById('reactContainer')
+        );
+    </script>
+</body>
+
+</html>
